@@ -1,16 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import customeTheme from './theme';
-  
+import Home from './pages/Home';
+
 const theme = createTheme(customeTheme);
+
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
-        
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
