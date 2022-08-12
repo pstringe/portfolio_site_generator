@@ -1,6 +1,129 @@
-# Getting Started with Create React App
+# Portfolio Site Generator Technical Specification
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Last Edited: August 11, 2022 5:14 PM
+
+# Overview
+
+- Developer edits JSON specification in this project,  scaffolds a portfolio site displaying their contact information and projects, and is free to edit the components and CSS.
+
+# Technical Requirements
+
+- Figma:
+- Developers should be able to modify a file containing a specification with the following properties:
+    - Logo file location
+    - Name
+    - Contact
+        - email
+        - phone
+        - social media
+    - List of pages
+        - Each page has a type, associated media, and links
+        - There are 4 types of pages
+            - Home
+            - PortfolioIndex
+            - PortfolioDetail
+            - Contact
+
+# Proposed solution
+
+## User Stories
+
+- Developer fills out a specification of the specified format
+- Developer runs the react application and a portfolio is site is scaffolded according to the specification
+
+## Data Model
+
+- This site’s content will be statically hosted
+- Media will be stored locally until performance dictates an alternative solution
+- content.ts module will import json spec and store elements in appropriate constants
+- hooks will import values from content.ts for use in the application. This will make it easier to use an api for this function in the future
+
+## Business Logic
+
+### Component Hierarchy
+
+```mermaid
+graph TD
+	App --> Page
+	App --> Header
+	App --> Footer
+	
+  Page --> Home
+	Page --> Index
+	Page --> Detail
+	Page --> Contact
+	
+	Home --> MainDisplay
+	Index --> Section
+	Section --> Card
+	Section --> SectionImg
+
+	Detail --> MainImg
+	Detail --> Background
+	Detail --> StaticPreview
+	Detail --> Summary
+	Detail --> BottomNav
+	Detail --> ContactPrompt
+
+```
+
+### Example JSON Spec
+
+```json
+{
+	"siteTitle": "Pstringe",
+	"author": "Poitier Stringer",
+	"jobTitle": "Software Engineer",
+	"logo": "[path]",
+	"pages": [
+		{
+			"type": "HOME",
+			"media": {
+				"mainImg": "[path]",
+				"secondaryImg": "[path]"
+			},
+			"about": "I’m a ${AUTHOR_TITLE} looking for a new interesting projects to work on. I specialize in developing fullstack applications for business needs. Some industries I've worked in include, health-tech, eccomerce, and education. I'm based in the San Francisio Bay area but I’m happy working remotely and have experience in remote teams. When I’m not coding, you’ll find me reading, writing, playing guitar, or spending time outdoors. I love being out in nature whether that’s going for a walk, slack lining, or riding my electric long-board. I’d love you to check out my work.",
+			"greeting": "Hey, I’m ${AUTHOR_NAME} and I love building beautiful websites",
+		},
+		{
+			"title": "manage",
+			"type": "DETAIL",
+			"link": "[url]",
+			"background": "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
+			"tags": [
+					"Interaction Design/Front End Development",
+					"HTML/CSS/JS"
+			],
+			"media": {
+				"mainImg": "[path]",
+			},
+			"pageOrder": {
+				"next":"",
+				"prev":""
+			}
+		},
+		{
+			"type": "INDEX"
+			/*
+			renders using data provided in page specifications of type "DETAIL"
+			*/
+		},
+		{
+			"type": "CONTACT",
+			"message": "I’m a ${AUTHOR_TITLE} looking for a new interesting projects to work on. I specialize in developing fullstack applications for business needs. Some industries I've worked in include, health-tech, eccomerce, and education. I'm based in the San Francisio Bay area but I’m happy working remotely and have experience in remote teams. When I’m not coding, you’ll find me reading, writing, playing guitar, or spending time outdoors. I love being out in nature whether that’s going for a walk, slack lining, or riding my electric long-board. I’d love you to check out my work.",
+			"social": {
+				"gh": "[url]",
+				"linkedin":"[url]"
+            }
+	
+		},
+	],
+}
+```
+
+## Presentation Layer
+
+[https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FpOTjiJ4ojw5k6Rz92XmcET%2Fminimalist-portfolio-website%3Fnode-id%3D0%253A1](https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FpOTjiJ4ojw5k6Rz92XmcET%2Fminimalist-portfolio-website%3Fnode-id%3D0%253A1)
 
 ## Available Scripts
 

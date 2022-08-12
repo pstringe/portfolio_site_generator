@@ -1,8 +1,9 @@
 import { Container } from '@mui/system';
+import MainDisplaySection from '../components/sections/MainDisplaySection';
 const Home = () => {
     return (
         <Container>
-        <h1>Home</h1>
+            <MainDisplaySection/>
         </Container>
     );
 }
