@@ -34,38 +34,11 @@ Last Edited: August 11, 2022 5:14 PM
 ## Data Model
 
 - This site’s content will be statically hosted
-- Media will be stored locally until performance dictates an alternative solution
+- Media will be stored locally until performance necessitates an alternative solution
 - content.ts module will import json spec and store elements in appropriate constants
 - hooks will import values from content.ts for use in the application. This will make it easier to use an api for this function in the future
 
 ## Business Logic
-
-### Component Hierarchy
-
-```mermaid
-graph TD
-	App --> Page
-	App --> Header
-	App --> Footer
-	
-  Page --> Home
-	Page --> Index
-	Page --> Detail
-	Page --> Contact
-	
-	Home --> MainDisplay
-	Index --> Section
-	Section --> Card
-	Section --> SectionImg
-
-	Detail --> MainImg
-	Detail --> Background
-	Detail --> StaticPreview
-	Detail --> Summary
-	Detail --> BottomNav
-	Detail --> ContactPrompt
-
-```
 
 ### Example JSON Spec
 
@@ -122,8 +95,34 @@ graph TD
 ```
 
 ## Presentation Layer
+### Component Hierarchy
 
-[https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FpOTjiJ4ojw5k6Rz92XmcET%2Fminimalist-portfolio-website%3Fnode-id%3D0%253A1](https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FpOTjiJ4ojw5k6Rz92XmcET%2Fminimalist-portfolio-website%3Fnode-id%3D0%253A1)
+```mermaid
+graph TD
+	App --> Page
+	App --> Header
+	App --> Footer
+	
+  Page --> Home
+	Page --> Index
+	Page --> Detail
+	Page --> Contact
+	
+	Home --> MainDisplay
+	Index --> Section
+	Section --> Card
+	Section --> SectionImg
+
+	Detail --> MainImg
+	Detail --> Background
+	Detail --> StaticPreview
+	Detail --> Summary
+	Detail --> BottomNav
+	Detail --> ContactPrompt
+
+```
+### Figma 
+![https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FpOTjiJ4ojw5k6Rz92XmcET%2Fminimalist-portfolio-website%3Fnode-id%3D0%253A1](https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FpOTjiJ4ojw5k6Rz92XmcET%2Fminimalist-portfolio-website%3Fnode-id%3D0%253A1)
 
 ## Available Scripts
 
