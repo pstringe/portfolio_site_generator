@@ -1,0 +1,46 @@
+{
+	"siteTitle": "Pstringe",
+	"author": "Poitier Stringer",
+	"jobTitle": "Software Engineer",
+	"logo": "[path]",
+	"pages": [
+		{
+			"type": "HOME",
+			"media": {
+				"mainImg": "[path]",
+				"secondaryImg": "[path]"
+			},
+			"about": "I’m a ${AUTHOR_TITLE} looking for a new interesting projects to work on. I specialize in developing fullstack applications for business needs. Some industries I've worked in include, health-tech, eccomerce, and education. I'm based in the San Francisio Bay area but I’m happy working remotely and have experience in remote teams. When I’m not coding, you’ll find me reading, writing, playing guitar, or spending time outdoors. I love being out in nature whether that’s going for a walk, slack lining, or riding my electric long-board. I’d love you to check out my work.",
+			"greeting": "Hey, I’m ${AUTHOR_NAME} and I love building beautiful websites"
+		},
+		{
+			"title": "manage",
+			"type": "DETAIL",
+			"link": "[url]",
+			"background": "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
+			"tags": [
+					"Interaction Design/Front End Development",
+					"HTML/CSS/JS"
+			],
+			"media": {
+				"mainImg": "[path]"
+			},
+			"pageOrder": {
+				"next":"",
+				"prev":""
+			}
+		},
+		{
+			"type": "INDEX"
+		},
+		{
+			"type": "CONTACT",
+			"message": "I’m a ${AUTHOR_TITLE} looking for a new interesting projects to work on. I specialize in developing fullstack applications for business needs. Some industries I've worked in include, health-tech, eccomerce, and education. I'm based in the San Francisio Bay area but I’m happy working remotely and have experience in remote teams. When I’m not coding, you’ll find me reading, writing, playing guitar, or spending time outdoors. I love being out in nature whether that’s going for a walk, slack lining, or riding my electric long-board. I’d love you to check out my work.",
+			"social": {
+				"gh": "[url]",
+				"linkedin":"[url]"
+            }
+	
+		}
+	]
+}
